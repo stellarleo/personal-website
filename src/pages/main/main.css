@@ -1,0 +1,112 @@
+.wrapper .mainContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media screen and (min-width: 992px) {
+  .wrapper .mainContainer {
+    flex-direction: row;
+  }
+}
+.wrapper .mainContainer .home {
+  background-color: red;
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+}
+.wrapper .mainContainer .about {
+  background-color: blue;
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+}
+.wrapper .mainContainer .work {
+  background-color: green;
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+}
+.wrapper .mainContainer .contact {
+  background-color: purple;
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+}
+.wrapper .mainContainer .title-animation {
+  font-size: 5.5vw;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: 10%;
+  transition: all 500ms ease;
+}
+@media screen and (min-width: 992px) {
+  .wrapper .mainContainer .title-animation {
+    transform: rotate(90deg);
+  }
+}
+.wrapper .mainContainer .para-animation {
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transition: all 500ms ease;
+}
+@media screen and (min-width: 992px) {
+  .wrapper .mainContainer .para-animation {
+    transform: rotate(90deg);
+    text-align: center;
+    margin-top: 20%;
+  }
+}
+.wrapper .mainContainer .div-animation { /* Safari 6.1+ */ /* IE 10 */
+  flex: 1;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+@media screen and (max-width: 992px) {
+  .wrapper .mainContainer .div-animation {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wrapper .mainContainer .div-animation p {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wrapper .mainContainer .div-animation ul li {
+    font-size: 2em;
+  }
+}
+.wrapper .mainContainer .div-animation:hover {
+  flex-grow: 3;
+}
+@-webkit-keyframes paraTranslate {
+  0% {
+    flex-grow: 1;
+  }
+  50% {
+    flex-grow: 3;
+  }
+  100% {
+    flex-grow: 1;
+  }
+}
+@keyframes paraTranslate {
+  0% {
+    flex-grow: 1;
+  }
+  50% {
+    flex-grow: 3;
+  }
+  100% {
+    flex-grow: 1;
+  }
+}/*# sourceMappingURL=main.css.map */
