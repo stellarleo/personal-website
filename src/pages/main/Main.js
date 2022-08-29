@@ -1,14 +1,35 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './main.css'
 
 export default function Main() {
+  const [isHovering, setIsHovering] = useState(false);
+  const [width, setWidth] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight
+  });
+
+  useEffect(() => {
+    window.addEventListener('resize', setDimension);
+    
+    return(() => {
+        window.removeEventListener('resize', setDimension);
+    })
+  }, [width])
+
+  const setDimension = () => {
+    setWidth({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight
+    })
+  }
+  
   return (
    <div className='wrapper' >
         <div className='mainContainer' >
-            <div className='div-animation home' >
-              <div className="title-animation homeTitle">Home</div>  
-              <div className="para-animation homePara">
-                <p>
+            <div style={{justifyContent:'center'}}  onMouseOver={()=>setIsHovering(true)} onMouseOut={()=>setIsHovering(false)} className='div-animation home' >
+              <div style={{rotate:isHovering&& width.dynamicWidth>=992?'-90deg':'0deg',}} className="title-animation homeTitle">Home</div>  
+              <div style={{opacity:isHovering ? 1:0,rotate:isHovering && width.dynamicWidth>=992?'-90deg':'0deg' }} className="para-animation homePara">
+                <p >
                   Click here to navigate to the home section of the website
                 </p>
               </div>
@@ -40,4 +61,8 @@ export default function Main() {
         </div>
     </div>    
   )
+
+  const styles=()=>{
+    title:{}
+  }
 }
