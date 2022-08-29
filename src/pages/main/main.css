@@ -2,8 +2,6 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  overflow: hidden;
-  position: absolute;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -37,31 +35,30 @@
   align-content: center;
 }
 .wrapper .mainContainer .title-animation {
-  font-size: 5.5vw;
-  color: white;
+  color: hsl(0deg, 0%, 95%);
+  font-size: 6vw;
   text-align: center;
+  transform: rotate(0deg);
   position: relative;
-  margin-top: 10%;
   transition: all 500ms ease;
 }
 @media screen and (min-width: 992px) {
   .wrapper .mainContainer .title-animation {
-    transform: rotate(90deg);
+    transform: rotate(90deg) !important;
   }
 }
 .wrapper .mainContainer .para-animation {
-  font-size: 3vw;
-  color: white;
-  text-align: center;
+  color: #f1f1f1;
   position: relative;
-  opacity: 0;
+  font-size: 3vw;
+  padding: 5%;
+  text-align: center;
   transition: all 500ms ease;
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .wrapper .mainContainer .para-animation {
-    transform: rotate(90deg);
-    text-align: center;
-    margin-top: 20%;
+    padding: 0%;
+    border: 0px solid #f1f1f1;
   }
 }
 .wrapper .mainContainer .div-animation { /* Safari 6.1+ */ /* IE 10 */
@@ -87,6 +84,12 @@
 }
 .wrapper .mainContainer .div-animation:hover {
   flex-grow: 3;
+}
+.wrapper .mainContainer .home {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 @-webkit-keyframes paraTranslate {
   0% {
