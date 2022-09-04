@@ -34,6 +34,11 @@
   height: 100vh;
   align-content: center;
 }
+.wrapper .mainContainer .homePara {
+  border: #f1f1f1;
+  border-width: 5;
+  border-radius: 5;
+}
 .wrapper .mainContainer .title-animation {
   color: hsl(0deg, 0%, 95%);
   font-size: 6vw;
@@ -45,20 +50,21 @@
 @media screen and (min-width: 992px) {
   .wrapper .mainContainer .title-animation {
     transform: rotate(90deg) !important;
+    margin-top: 50%;
+    background-color: transparent;
   }
 }
 .wrapper .mainContainer .para-animation {
   color: #f1f1f1;
   position: relative;
-  font-size: 3vw;
-  padding: 5%;
+  font-size: 2vw;
+  transform: rotate(0deg);
   text-align: center;
   transition: all 500ms ease;
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   .wrapper .mainContainer .para-animation {
-    padding: 0%;
-    border: 0px solid #f1f1f1;
+    transform: rotate(90deg) !important;
   }
 }
 .wrapper .mainContainer .div-animation { /* Safari 6.1+ */ /* IE 10 */
@@ -70,6 +76,11 @@
   .wrapper .mainContainer .div-animation {
     overflow: auto;
     overflow-x: hidden;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wrapper .mainContainer .div-animation {
+    padding-top: 13%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -84,6 +95,11 @@
 }
 .wrapper .mainContainer .div-animation:hover {
   flex-grow: 3;
+}
+@media screen and (min-width: 992px) {
+  .wrapper .mainContainer .div-animation:hover {
+    padding-top: 0;
+  }
 }
 .wrapper .mainContainer .home {
   height: 100vh;

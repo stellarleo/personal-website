@@ -36,6 +36,11 @@ $defaultSeconds: 3s;
             height: 100vh;
             align-content: center;  
         }
+        .homePara{
+          border: #f1f1f1;
+          border-width:5;
+          border-radius: 5;
+        }
         .title-animation{
             color: hsl(0, 0%, 95%);  
             //rotate:'45deg'
@@ -49,25 +54,29 @@ $defaultSeconds: 3s;
             -ms-transition: all 500ms ease;  
             -o-transition: all 500ms ease;  
             transition: all 500ms ease;  
+            
             @media screen and (min-width: 992px) {  
-           transform: rotate(90deg) !important;  
-      } 
+           transform: rotate(90deg) !important; 
+           margin-top: 50%; 
+           background-color: transparent;
+          } 
         }
         .para-animation{
            
             color: #f1f1f1;  
             position: relative;  
-            font-size: 3vw;  
-            padding: 5%;  
+            font-size: 2vw;  
+            transform: rotate(0deg);  
             text-align: center;  
             -webkit-transition: all 500ms ease;  
             -moz-transition: all 500ms ease;  
             -ms-transition: all 500ms ease;  
             -o-transition: all 500ms ease;  
             transition: all 500ms ease;  
-            @media screen and (max-width: 992px) {  
-                 padding: 0%;  
-                 border: 0px solid #f1f1f1;  
+            @media screen and (min-width: 992px) {  
+               transform: rotate(90deg) !important; 
+                
+               
             }  
         }
         .div-animation {  
@@ -75,6 +84,7 @@ $defaultSeconds: 3s;
             -ms-flex: 1; /* IE 10 */    
             flex: 1;  
             cursor: pointer;  
+           
             -webkit-transition: all 500ms ease;  
             -moz-transition: all 500ms ease;  
             -ms-transition: all 500ms ease;  
@@ -84,6 +94,9 @@ $defaultSeconds: 3s;
                  overflow: auto;  
                  overflow-x: hidden;  
             }  
+            @media screen and (min-width:992px) {
+               padding-top: 13%;
+            }
        }  
        .div-animation p {  
             @media screen and (max-width: 992px) {  
@@ -98,6 +111,9 @@ $defaultSeconds: 3s;
        .div-animation:hover {  
             -webkit-flex-grow: 3;  
             flex-grow: 3;  
+            @media screen and (min-width:992px) {
+               padding-top: 0;
+            }
        }
 
        .home {  
